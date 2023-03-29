@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const register = require("./routes/register");
+const login = require("./routes/login");
+
 
 const products = require("./products");
 
@@ -13,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/register", register);
+app.use("/api/login", login);
 
 app.get("/", (req, res) => {
   res.send("Bienvenido a Ecommerce-Sustantiva");
@@ -34,5 +37,3 @@ mongoose
   })
   .then(() => console.log("MongoDB conectado correctamente..."))
   .catch((err) => console.log("MongoDB falló al conectar", err.message));
-
-

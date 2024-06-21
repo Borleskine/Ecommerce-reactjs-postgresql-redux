@@ -1,5 +1,4 @@
-autor: "Johnny Sobarzo",
-contacto: Athair@hotmail.com
+
 @git/Borleskine
 
 Para iniciar Backend // nodemon
